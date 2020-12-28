@@ -23,7 +23,7 @@ public final class Task3 {
     }
 
     public static void main(String[] args) {
-        Task3 task3 = new Task3(1, 3, 2);
+        Task3 task3 = new Task3(1, 4, 2);
     }
 
     void check(int a, int b, int c) throws NotTriangle {
