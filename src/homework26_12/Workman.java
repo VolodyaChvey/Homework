@@ -1,37 +1,26 @@
 package homework26_12;
 
+import java.util.Map;
 
-import java.util.HashSet;
+public class Workman {
+    private Map<ProfSkill, Integer> wmMap;
 
-import java.util.Set;
-
-public class Workman implements Comparable<Workman> {
-    private int costMan;
-    private Set<ProfSkill> skillList = new HashSet<>();
-
-    public Workman(int costMan, Set<ProfSkill> skillList) {
-        this.costMan = costMan;
-        this.skillList = skillList;
+    public Workman(Map<ProfSkill, Integer> wmMap) {
+        this.wmMap = wmMap;
     }
 
-    public int getCostMan() {
-        return costMan;
+    public Map<ProfSkill, Integer> getWmMap() {
+        return wmMap;
     }
 
-    public Set<ProfSkill> getSkillList() {
-        return skillList;
+    public void setWmMap(Map<ProfSkill, Integer> wmMap) {
+        this.wmMap = wmMap;
     }
 
     @Override
     public String toString() {
-        return "Workman{" +
-                "costMan=" + costMan +
-                ", skillList=" + skillList +
-                '}';
+        return "Workman" + wmMap;
     }
 
-    @Override
-    public int compareTo(Workman o) {
-        return this.costMan - o.costMan;
-    }
+
 }
