@@ -1,22 +1,13 @@
 package homework9;
 
-import java.util.Random;
+import java.util.*;
+import java.util.stream.IntStream;
 
 public class Test {
     Random random = new Random();
 
     public static void main(String[] args) {
-        Test test = new Test();
-        System.out.println(test.workeNickname());
-    }
-
-    public String workeNickname() {
-        int i = random.nextInt(3) + 5;
-        char[] chars = new char[i];
-        for (int j = 0; j < chars.length; j++) {
-            chars[j] = (char) ((char) random.nextInt(57) + 65);
-        }
-        String nickname = String.valueOf(chars);
-        return nickname;
+       long count= IntStream.of(-5,-4,-3,-2,-1,0,1,2,3,4,5).filter(w->w>0).count();
+        System.out.println(count);
     }
 }
