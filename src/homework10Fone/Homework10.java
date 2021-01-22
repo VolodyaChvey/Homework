@@ -25,7 +25,6 @@ public class Homework10 {
                 public void run() {
                     while (b) {
                         b = card.workCard(money);
-                       // System.out.println(Thread.currentThread().getName());
                         try {
                             Thread.sleep((random.nextInt(4) + 2) * 1000);
                         } catch (InterruptedException e) {
